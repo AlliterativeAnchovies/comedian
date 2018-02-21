@@ -26,7 +26,7 @@ while(True):
     key = cv2.waitKey(0);#wait for keyboard input
     if (key==ord('q')): break
     #save it
-    cv2.imwrite("output_"+str(picnum)+".png",frame)
+    cv2.imwrite("pics/output_"+str(picnum)+".png",frame)
     picnum+=1
 
 # When everything done, release the capture
