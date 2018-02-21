@@ -5,7 +5,7 @@ import numpy as np
 import cv2 #'pip install opencv-python' is all you need for this dependency
 
 cap = cv2.VideoCapture(0)
-
+picnum = 0
 while(True):
     # Capture frame-by-frame
     ret, frame = cap.read()
@@ -26,7 +26,8 @@ while(True):
     key = cv2.waitKey(0);#wait for keyboard input
     if (key==ord('q')): break
     #save it
-    cv2.imwrite("output.png",frame)
+    cv2.imwrite("output_"+str(picnum)+".png",frame)
+    picnum+=1
 
 # When everything done, release the capture
 cap.release()
