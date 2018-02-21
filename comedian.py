@@ -23,11 +23,10 @@ while(True):
 
     # Display the resulting frame
     cv2.imshow('frame',gray)
-    if cv2.waitKey(1) & 0xFF == ord('q'):
-        break
+    key = cv2.waitKey(0);#wait for keyboard input
+    if (key==ord('q')): break
     #save it
     cv2.imwrite("output.png",frame)
-    break
 
 # When everything done, release the capture
 cap.release()
