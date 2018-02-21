@@ -2,7 +2,7 @@
 #import pygame.camera
 #from pygame.locals import *
 import numpy as np
-import cv2
+import cv2 #'pip install opencv-python' is all you need for this dependency
 
 cap = cv2.VideoCapture(0)
 
